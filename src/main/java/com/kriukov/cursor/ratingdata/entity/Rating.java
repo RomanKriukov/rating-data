@@ -7,7 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Rating {
 
-    private String movieId;
+    private int movieId;
 
     private int rating;
 }

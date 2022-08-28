@@ -14,13 +14,13 @@ import java.util.List;
 public class RatingInfoController {
 
     @GetMapping("/{movieId}")
-    public ResponseEntity<Rating> getRatingForMovie(@PathVariable String movieId){
+    public ResponseEntity<Rating> getRatingForMovie(@PathVariable int movieId){
         return ResponseEntity.ok(new Rating(movieId, 4));
     }
 
     @GetMapping("/users/{userId}")
     public List<Rating> getUserRating(@PathVariable String userId){
 
-        return List.of(new Rating("1234", 4), new Rating("5678", 5));
+        return List.of(new Rating(1234, 4), new Rating(5678, 5));
     }
 }
